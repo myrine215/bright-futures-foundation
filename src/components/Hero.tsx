@@ -11,7 +11,8 @@ const Hero = () => {
           backgroundImage: "url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30"></div>
+        {/* Green overlay with gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-charity-dark-green/80 to-charity-green/60"></div>
       </div>
 
       {/* Hero Content */}
@@ -23,15 +24,10 @@ const Hero = () => {
           <p className="text-lg md:text-xl mb-8 opacity-90 animate-fade-in" style={{ animationDelay: '0.4s' }}>
             God doesn't call you to help all 153,000,000 orphans worldwide. But you can help one. And for that one child, you can change the world.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          <div className="animate-fade-in" style={{ animationDelay: '0.6s' }}>
             <Link to="/donate">
               <button className="btn-secondary w-full sm:w-auto">
                 Donate Now
-              </button>
-            </Link>
-            <Link to="/about">
-              <button className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white/10 transition-colors duration-300 w-full sm:w-auto">
-                Learn More
               </button>
             </Link>
           </div>

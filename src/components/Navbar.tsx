@@ -21,23 +21,23 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-3' : 'bg-charity-dark-green/80 backdrop-blur-md py-5'}`}>
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-2">
-            <span className="text-charity-dark-green font-serif text-2xl font-bold">Bukal ng Buhay</span>
-            <span className="text-charity-green font-medium">Foundation</span>
+            <span className={`font-serif text-2xl font-bold ${scrolled ? 'text-charity-dark-green' : 'text-white'}`}>Bukal ng Buhay</span>
+            <span className={`font-medium ${scrolled ? 'text-charity-green' : 'text-charity-orange'}`}>Foundation</span>
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-charity-green font-medium transition-colors">
+            <Link to="/" className={`${scrolled ? 'text-gray-700 hover:text-charity-green' : 'text-white hover:text-charity-orange'} font-medium transition-colors`}>
               Home
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-charity-green font-medium transition-colors">
+            <Link to="/about" className={`${scrolled ? 'text-gray-700 hover:text-charity-green' : 'text-white hover:text-charity-orange'} font-medium transition-colors`}>
               About Us
             </Link>
-            <Link to="/contact" className="text-gray-700 hover:text-charity-green font-medium transition-colors">
+            <Link to="/contact" className={`${scrolled ? 'text-gray-700 hover:text-charity-green' : 'text-white hover:text-charity-orange'} font-medium transition-colors`}>
               Contact Us
             </Link>
             <Link to="/donate">
@@ -49,7 +49,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-gray-700" 
+            className={`md:hidden ${scrolled ? 'text-gray-700' : 'text-white'}`} 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
